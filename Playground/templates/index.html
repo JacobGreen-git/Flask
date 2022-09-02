@@ -13,19 +13,19 @@
         h1{
             text-align: center;
         }
-        #box{
+        .box{
             height: 100px;
             width: 100px;
-            background-color: aqua;
             border: 2px solid black;
+            display: inline-block;
+            background-color: {{color}};
         }
     </style>
 </head>
 <body>
     <h1>Welcome!</h1>
-    
-        <div id="box">
-            
-        </div>
-</body>
+        {% for x in range(0, times) %}
+            <div class="box"></div>
+        {% endfor %}
+    </body>
 </html>
