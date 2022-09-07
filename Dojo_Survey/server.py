@@ -22,18 +22,13 @@ def result():
         dojo_location = request.form["dojo_location"]
         favlanguage = request.form["favlanguage"]
         comments = request.form["comments"]
-        return render_template("result.html", name = name, dojo_location = dojo_location, favlanguage = favlanguage, comments = comments)
-
-
+        return render_template("results.html", name = name, dojo_location = dojo_location, favlanguage = favlanguage, comments = comments)
 
 
 @app.route("/danger")
 def danger_back():
     print("a user tried to visit '/danger'.  we have redirected the user to '/'")
     return redirect("/")
-
-
-
 
 
 
